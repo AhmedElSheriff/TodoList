@@ -62,6 +62,10 @@ public class addTodoActivityFragment extends Fragment {
                     todo.setDateAndtime(date);
                     todo.setTodoStatus(todoTextView.getText().toString());
                 }
+                else
+                {
+                    Toast.makeText(getContext(),"You forgot to fill the list!",Toast.LENGTH_LONG).show();
+                }
 
 
                 InsertThroughAsyncTask insertThroughAsyncTask = new InsertThroughAsyncTask(todo);
